@@ -1,0 +1,88 @@
+/***in header ***********/
+
+.toggle {
+  position: relative;
+  height: 35px;
+  width: 80px;
+  background-color: white;
+  border-radius: 2rem;
+  cursor: pointer;
+}
+.toggle::before {
+  content: "";
+  position: absolute;
+  height: 30px;
+  width: 30px;
+  background: black;
+  border-radius: 50%;
+  top: 15%;
+  left: 5px;
+  transform: translateY(-10%);
+  transition: all 0.3s ease-in-out;
+}
+.toggle.active::before {
+  background-color: white;
+  left: 45px;
+}
+
+/********changes after toggling*******/
+body.light header {
+  background-color: white;
+  color: black !important;
+}
+body.light {
+  background-color: white;
+  color: black;
+}
+body.light .nav-list {
+  background-color: white;
+  color: black;
+}
+body.light .toggle {
+  background-color: black;
+}
+
+/****header section******/
+body.light .nav-list li a {
+  text-decoration: none;
+  color: black !important;
+}
+
+/****about section******/
+
+body.light .grid-item-about p {
+  color: #615f5f;
+}
+/****portfolio section******/
+body.light .grid-items {
+  border: 2px solid black;
+}
+
+body.light .grid-items:hover {
+  color: white;
+}
+body.light .search-btn {
+  color: black;
+  background-color: white;
+}
+/****contact section******/
+body.light .contact-form input {
+  border: 2px solid black;
+}
+body.light .contact-form textarea {
+  border: 2px solid black;
+}
+body.light .contact-btn {
+  border: 2px solid black;
+  background-color: white;
+  color: black;
+}
+body.light .contact-btn:hover {
+  background-color: black;
+  color: white;
+}
+
+/****footer section******/
+body.light .contact-link svg {
+  fill: black;
+}

@@ -1,0 +1,358 @@
+/***********GENERAL********/
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: black;
+  font-family: Arial, Helvetica, sans-serif;
+  color: white;
+  height: 100vh;
+  width: 100vw;
+  transition: all 0.3s ease-in-out;
+  overflow-x: hidden;
+}
+
+/*********HEADER************/
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.2rem 2rem;
+  border-bottom: 1px solid rgb(72, 72, 72);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  background-color: black;
+}
+.logo {
+  width: 170px;
+  height: 80px;
+}
+.nav-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+.nav-list li {
+  list-style: none;
+  cursor: pointer;
+  font-size: 1.3rem;
+}
+.nav-list li a {
+  text-decoration: none;
+  color: white;
+  padding: 10px;
+}
+.nav-list li a:hover {
+  background-color: #737272;
+  padding: 10px;
+  border-radius: 5px;
+}
+.nav-toggle {
+  display: none;
+}
+/*****************************************/
+main {
+  padding-top: 4rem;
+}
+/********* SECTION - ABOUT ************/
+.section-about {
+  width: 100%;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  border-bottom: 1px solid rgb(72, 72, 72);
+}
+.about-heading {
+  font-size: 5rem;
+  text-align: center;
+  padding: 2rem;
+}
+.grid-container-about {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 4rem;
+  justify-content: center;
+  max-width: 1300px;
+  gap: 5rem;
+  margin: 0 auto;
+}
+.grid-item-about {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 2rem;
+  margin-left: 2rem;
+}
+.grid-item-about h1 {
+  font-size: 3rem;
+}
+.grid-item-about h3 {
+  font-size: 1.8rem;
+  color: #615f5f;
+}
+.grid-item-about p {
+  font-size: 1.3rem;
+  letter-spacing: 2px;
+  color: #ccc;
+}
+
+.myphoto {
+  width: 100%;
+  height: auto;
+  max-width: 700px; /* max width for larger screens */
+  display: block;
+  margin: 0 auto;
+}
+
+/*********SECTION - SKILLS************/
+.section-skills {
+  width: 100%;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  border-bottom: 1px solid rgb(72, 72, 72);
+}
+.skills-heading {
+  font-size: 5rem;
+  text-align: center;
+  padding: 2rem;
+}
+.skills-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4rem;
+  flex-wrap: wrap;
+}
+.skills-list li:hover {
+  transform: scale(1.3);
+}
+.skills-list li {
+  text-align: center;
+  letter-spacing: 1.5px;
+  list-style: none;
+  cursor: pointer;
+  font-size: 1.3rem;
+}
+.skills-list li svg {
+  width: 70px;
+  height: 70px;
+}
+
+/*********SECTION - PORTFOLIO ************/
+.section-portfolio {
+  width: 100%;
+  padding: 2rem;
+  border-bottom: 1px solid rgb(72, 72, 72);
+}
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  padding: 4rem;
+  justify-content: center;
+  max-width: 1300px;
+  gap: 2rem;
+  margin: 0 auto;
+}
+.grid-items {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1.3rem;
+  width: 300px;
+  border: 2px solid white;
+  border-radius: 1.5rem;
+  overflow: hidden;
+  transition: all 0.3s ease-in-out;
+}
+.grid-items:hover {
+  transform: scale(1.1);
+  background: linear-gradient(45deg, #ff5733, #ff8d1a, #ffc300);
+  color: black;
+}
+.grid-items img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.grid-text {
+  padding: 1.2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 1.4rem;
+}
+.portfolio-heading {
+  font-size: 5rem;
+  text-align: center;
+  padding: 2rem;
+}
+.project-category {
+  color: rgb(172, 172, 172);
+}
+
+.project-title {
+  font-size: 1.5rem;
+}
+
+.project-desc {
+  word-spacing: 2px;
+}
+
+/********search area in portfolio*********/
+
+.search-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+  position: relative;
+  margin: 20px auto;
+  gap: 1rem;
+}
+
+#searchInput {
+  padding: 10px 40px 10px 10px;
+  font-size: 16px;
+  width: 60%;
+  border: 2px solid #ccc;
+  border-radius: 20px;
+  outline: none;
+}
+#searchInput:focus {
+  border: 2px solid #535252;
+}
+.search-btn {
+  font-size: 2rem;
+  font-weight: 700;
+  color: white;
+  background-color: black;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem 1.5rem;
+  flex-shrink: 0; /* Prevent the button from shrinking */
+}
+
+/*********SECTION - CONTACT ************/
+.section-contact {
+  width: 100%;
+  padding: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10rem;
+  margin-bottom: 2rem;
+  border-bottom: 1px solid rgb(72, 72, 72);
+}
+.contact-heading {
+  width: 300px;
+}
+.contact-heading h1 {
+  font-size: 5rem;
+  line-height: 1.6;
+}
+.contact-form {
+  width: 350px;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+.contact-form input,
+textarea {
+  padding: 1.2rem;
+  border-radius: 1.1rem;
+  background: transparent;
+  border: none;
+  font-size: 1.1rem;
+  border: 2px solid white;
+}
+.contact-form input:focus,
+.contact-form textarea:focus {
+  background-color: white;
+  outline: none;
+}
+/* Change to color only when input has content */
+.contact-form input:not(:placeholder-shown),
+.contact-form textarea:not(:placeholder-shown) {
+  background-color: #f0f0f0;
+}
+.input-msg {
+  min-height: 150px;
+  width: 100%;
+  resize: none;
+  overflow-wrap: break-word;
+}
+.contact-btn {
+  width: 150px;
+  background-color: black;
+  border: 2px solid white;
+  color: white;
+  font-size: 1.2rem;
+  border-radius: 2rem;
+  padding: 10px 20px;
+}
+.contact-btn:hover {
+  cursor: pointer;
+  background-color: white;
+  color: black;
+}
+
+/****error in form****/
+.error-msg {
+  color: red;
+  font-size: 0.9rem;
+  display: none;
+}
+/* Positioning error messages*/
+.contact-form input + .error-msg,
+.input-msg + .counter,
+.input-msg + .counter + .error-msg {
+  padding-top: 0.2rem;
+  text-align: right;
+  margin-top: -3rem;
+  position: relative;
+}
+.counter {
+  font-size: 0.9rem;
+  color: gray;
+}
+#submitted-form {
+  color: rgb(13, 189, 13);
+  font-size: 0.9rem;
+  display: none;
+}
+/*********FOOTER************/
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 4rem;
+  padding: 2rem 0;
+}
+footer h1 {
+  font-size: 3rem;
+}
+.contact-link {
+  display: flex;
+  gap: 2rem;
+  transition: all 0.3s ease;
+}
+.contact-link li {
+  list-style: none;
+}
+
+.contact-link li svg:hover {
+  transform: scale(1.3);
+}
+.contact-link svg {
+  width: 30px;
+  height: 30px;
+  fill: white;
+  cursor: pointer;
+}
